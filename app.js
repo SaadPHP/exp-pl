@@ -15,6 +15,11 @@ app.get('/contact',(req, res) => {
     res.sendFile(__dirname + '/client/contact.html');
 });
 
+// profile route with params
+app.get('/profile/:name',(req, res) => {
+    res.send(`Welcome to profile of ${req.params.name}`);
+});
+
 // 404 route
 app.get('*',(req, res) => {
     res.sendFile(__dirname + '/client/404.html');
