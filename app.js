@@ -8,6 +8,7 @@ var app = express();
 // setting up ejs
 app.set('view engine','ejs');
 
+
 // default route
 app.get('/',(req, res) => {
     res.sendFile(__dirname + '/client/index.html');
