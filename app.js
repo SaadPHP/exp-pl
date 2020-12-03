@@ -11,19 +11,21 @@ app.set('view engine','ejs');
 // setting static directory
 app.use(express.static(__dirname + '/public'));
 
-// default route
+/*
+default route for normal .html pages
 app.get('/',(req, res) => {
     res.sendFile(__dirname + '/client/index.html');
+});
+*/ 
+
+// default route
+app.get('/',(req, res) => {
+    res.render('index');
 });
 
 // contact route
 app.get('/contact',(req, res) => {
-    res.sendFile(__dirname + '/client/contact.html');
-});
-
-// prof route with params
-app.get('/prof/:name',(req, res) => {
-    res.send(`Welcome to profile of ${req.params.name}`);
+    res.render('contact');
 });
 
 // profile route with ejs and params
@@ -34,7 +36,7 @@ app.get('/profile/:name', (req, res) => {
 
 // 404 route
 app.get('*',(req, res) => {
-    res.sendFile(__dirname + '/client/404.html');
+    res.render('404');
 });
 
 // handling port
