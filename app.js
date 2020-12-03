@@ -8,6 +8,8 @@ var app = express();
 // setting up ejs
 app.set('view engine','ejs');
 
+// setting static directory
+app.use(express.static(__dirname + '/public'));
 
 // default route
 app.get('/',(req, res) => {
