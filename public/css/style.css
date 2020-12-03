@@ -32,3 +32,29 @@ ul li{
 .clear{
     clear: both;
 }
+nav{
+    margin-left: 0px;
+}
+nav ul li{
+    display: flex;
+    flex-direction: row;
+    margin-left: 10px;
+}
+nav ul li a{
+    text-decoration: none;
+    text-align: center;
+    width: 70px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 3px black;
+    background-color: whitesmoke;
+    color: black;
+    -webkit-transition: background-color 500ms, color 500ms;
+    transition: background-color 500ms, color 500ms;
+    -moz-transition: background-color 500ms, color 500ms;
+    -o-transition: background-color 500ms, color 500ms;
+}
+nav ul li a:hover{
+    background-color: black;
+    color: whitesmoke;
+}
